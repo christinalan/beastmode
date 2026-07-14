@@ -126,4 +126,22 @@ export const locations = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Rumors+Oakland",
   },
+
+    {
+    stop: 8,
+    id: "marcusbooks",
+    name: "Marcus Books",
+    category: "Bookstore",
+    address: "3900 Martin Luther King Jr Way, Oakland, CA 94609",
+    position: {
+      lat: 37.82915,
+      lng: -122.26844,
+    },
+    description:
+      "Historic independent bookshop, opened in the '60s, specializing in titles by & about black people.",
+    videoSrc: "/videos/marcusbooks.mp4",
+    videoCaption: "video of Marshawn talking about Marcus Books",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Marcus+Books",
+  },
 ];
