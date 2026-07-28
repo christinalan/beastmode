@@ -13,8 +13,8 @@ export const locations = [
       "The first museum dedicated to preserving and sharing the legacy of the Black Panther Party, founded in Oakland.",
     // audioSrc: "/audio/marcusbooks.mp3",
     // imageSrc: "/images/image1.png",
-    videoSrc: "/videos/marcusbooks.mp4",
-    videoCaption: "video of Marshawn talking about Marcus Books",
+    videoSrc: "/videos/BlackPantherMuseum.mp4",
+    videoCaption: "video of Marshawn talking about Black Panther Museum",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Black+Panther+Party+Museum+Oakland",
   },
@@ -31,7 +31,7 @@ export const locations = [
     },
     description:
       "One of North Oakland's most beloved neighborhood parks with basketball courts, baseball fields, and a vibrant community atmosphere.",
-    videoSrc: "/videos/marcusbooks.mp4",
+    videoSrc: "/videos/OaklandParks.mp4",
     videoCaption: "video of Marshawn talking about Marcus Books",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Bushrod+Park+Oakland",
@@ -67,7 +67,7 @@ export const locations = [
     },
     description:
       "An upscale East Bay barbershop known for precision cuts and serving as a neighborhood gathering place.",
-    videoSrc: "/videos/marcusbooks.mp4",
+    videoSrc: "/videos/Extravagant.mp4",
     videoCaption: "video of Marshawn talking about Marcus Books",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Extravagant+Grooming+Lounge",
@@ -103,8 +103,8 @@ export const locations = [
     },
     description:
       "A longtime East Bay soul food institution just over the Oakland border, known for Southern comfort food and community gatherings.",
-    videoSrc: "/videos/marcusbooks.mp4",
-    videoCaption: "video of Marshawn talking about Marcus Books",
+    videoSrc: "/videos/RobBens.mp4",
+    videoCaption: "video of Marshawn talking about Rob Ben's",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Rob+Ben%27s+Restaurant+Emeryville",
   },
