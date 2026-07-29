@@ -10,7 +10,8 @@ export const locations = [
       lng: -122.2715,
     },
     description:
-      "The first museum dedicated to preserving and sharing the legacy of the Black Panther Party, founded in Oakland.",
+    "I mean...what Oakland is really about",
+      // "The first museum dedicated to preserving and sharing the legacy of the Black Panther Party, founded in Oakland.",
     // audioSrc: "/audio/marcusbooks.mp3",
     // imageSrc: "/images/image1.png",
     videoSrc: "/videos/BlackPantherMuseum.mp4",
