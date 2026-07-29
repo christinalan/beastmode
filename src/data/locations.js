@@ -22,7 +22,7 @@ export const locations = [
     {
     stop: 2,
     id: "bushrod-park",
-    name: "Bushrod Park",
+    name: "Oakland Parks",
     category: "Park",
     address: "560 59th St, Oakland, CA 94609",
     position: {
@@ -30,7 +30,7 @@ export const locations = [
       lng: -122.2647,
     },
     description:
-      "One of North Oakland's most beloved neighborhood parks with basketball courts, baseball fields, and a vibrant community atmosphere.",
+      "A few of Oakland's most beloved neighborhood parks with basketball courts, baseball fields, and vibrant community atmospheres.",
     videoSrc: "/videos/OaklandParks.mp4",
     videoCaption: "video of Marshawn talking about Oakland Parks",
     mapsUrl:
