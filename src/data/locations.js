@@ -32,7 +32,7 @@ export const locations = [
     description:
       "One of North Oakland's most beloved neighborhood parks with basketball courts, baseball fields, and a vibrant community atmosphere.",
     videoSrc: "/videos/OaklandParks.mp4",
-    videoCaption: "video of Marshawn talking about Marcus Books",
+    videoCaption: "video of Marshawn talking about Oakland Parks",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Bushrod+Park+Oakland",
   },
@@ -49,7 +49,7 @@ export const locations = [
     },
     description:
       "Mistah F.A.B.'s Oakland clothing brand celebrating Bay Area culture through fashion.",
-    videoSrc: "/videos/dopeera.mp4",
+    videoSrc: "/videos/DopeEraClothing.mp4",
     videoCaption: "video of Marshawn talking about Dope Era",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Dope+Era+Oakland",
