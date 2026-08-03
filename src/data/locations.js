@@ -68,7 +68,7 @@ export const locations = [
     },
     description:
       "An upscale East Bay barbershop known for precision cuts and serving as a neighborhood gathering place.",
-    videoSrc: "/videos/Extravagant.mp4",
+    videoSrc: "/videos/ExtravagantGroomingLounge.mp4",
     videoCaption: "video of Marshawn talking about Marcus Books",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Extravagant+Grooming+Lounge",
@@ -87,7 +87,7 @@ export const locations = [
     description:
       "An iconic Oakland jazz club and cultural venue that has hosted musicians, artists, activists, and community events for decades.",
     videoSrc: "/videos/marcusbooks.mp4",
-    videoCaption: "video of Marshawn talking about Marcus Books",
+    videoCaption: "video of Marshawn talking about Jeffries (Geoffrey's Inner Circle) and Mingles",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Geoffrey%27s+Inner+Circle+Oakland",
   },
@@ -122,8 +122,8 @@ export const locations = [
     },
     description:
       "A former Oakland nightlife staple remembered by many locals. (Replace with the exact historical address if you'd like the pin to be precise.)",
-    videoSrc: "/videos/marcusbooks.mp4",
-    videoCaption: "video of Marshawn talking about Marcus Books",
+    videoSrc: "/videos/Rumors.mp4",
+    videoCaption: "video of Marshawn talking about Rumors, a nightclub that has since closed down",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Rumors+Oakland",
   },
@@ -140,7 +140,7 @@ export const locations = [
     },
     description:
       "Historic independent bookshop, opened in the '60s, specializing in titles by & about black people.",
-    videoSrc: "/videos/marcusbooks.mp4",
+    videoSrc: "/videos/MarcusBooks.mp4",
     videoCaption: "video of Marshawn talking about Marcus Books",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marcus+Books",
