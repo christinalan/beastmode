@@ -59,7 +59,7 @@ function LocationPanel({ location }) {
             target="_blank"
             rel="noreferrer"
           >
-            Open in Google Maps
+            Save in Google Maps
           </a>
         )}
       </div>
