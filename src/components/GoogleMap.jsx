@@ -9,10 +9,82 @@ const OAKLAND_CENTER = {
   lng: -122.2712,
 };
 
+const INITIAL_ZOOM = 12;
+const TOUR_ZOOM = 18;
+const PAN_DURATION = 1200;
+
+function easeInOutCubic(progress) {
+  return progress < 0.5
+    ? 4 * progress * progress * progress
+    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+}
+
+function animateMapTo(
+  map,
+  destination,
+  destinationZoom,
+  duration = PAN_DURATION,
+) {
+  const startingCenter = map.getCenter();
+  const startingZoom = map.getZoom();
+
+  if (!startingCenter || startingZoom == null) {
+    map.moveCamera({
+      center: destination,
+      zoom: destinationZoom,
+    });
+
+    return () => {};
+  }
+
+  const start = {
+    lat: startingCenter.lat(),
+    lng: startingCenter.lng(),
+    zoom: startingZoom,
+  };
+
+  const startTime = performance.now();
+  let animationFrameId;
+
+  function animate(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeInOutCubic(progress);
+
+    const lat =
+      start.lat +
+      (destination.lat - start.lat) * easedProgress;
+
+    const lng =
+      start.lng +
+      (destination.lng - start.lng) * easedProgress;
+
+    const zoom =
+      start.zoom +
+      (destinationZoom - start.zoom) * easedProgress;
+
+    map.moveCamera({
+      center: { lat, lng },
+      zoom,
+    });
+
+    if (progress < 1) {
+      animationFrameId = requestAnimationFrame(animate);
+    }
+  }
+
+  animationFrameId = requestAnimationFrame(animate);
+
+  return () => {
+    cancelAnimationFrame(animationFrameId);
+  };
+}
+
 function GoogleMap({
   locations,
   selectedLocation,
   onSelectLocation,
+  tourStarted,
 }) {
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
@@ -75,7 +147,7 @@ function GoogleMap({
 
         const map = new Map(mapContainerRef.current, {
           center: OAKLAND_CENTER,
-          zoom: 12,
+          zoom: INITIAL_ZOOM,
           mapId,
           mapTypeControl: false,
           streetViewControl: false,
@@ -107,18 +179,8 @@ function GoogleMap({
             content: pin.element,
           });
 
-          marker.addListener("click", () => {
+            marker.addListener("click", () => {
             onSelectLocationRef.current(location);
-
-            map.panTo(location.position);
-
-            /*
-             * Increase this to 15 or 16 if you want the map
-             * to zoom closer whenever a pin is selected.
-             */
-            if ((map.getZoom() ?? 12) < 14) {
-              map.setZoom(14);
-            }
           });
 
           return {
@@ -161,19 +223,36 @@ function GoogleMap({
    * Update marker appearance when selectedLocation changes.
    */
   useEffect(() => {
-    markersRef.current.forEach(({ locationId, pin }) => {
-      const isSelected = selectedLocation?.id === locationId;
+  const map = mapRef.current;
 
-      pin.background = isSelected ? "#b43a2f" : "#222222";
-      pin.borderColor = "#ffffff";
-      pin.glyphColor = "#ffffff";
-      pin.scale = isSelected ? 1.35 : 1.1;
-    });
+  if (!map || !selectedLocation) {
+    return;
+  }
 
-    if (selectedLocation && mapRef.current) {
-      mapRef.current.panTo(selectedLocation.position);
-    }
-  }, [selectedLocation]);
+  markersRef.current.forEach(({ locationId, pin }) => {
+    const isSelected = selectedLocation.id === locationId;
+
+    pin.background = isSelected ? "#b43a2f" : "#222222";
+    pin.borderColor = "#ffffff";
+    pin.glyphColor = "#ffffff";
+    pin.scale = isSelected ? 1.35 : 1.1;
+  });
+
+  const destinationZoom = tourStarted
+    ? TOUR_ZOOM
+    : map.getZoom() ?? INITIAL_ZOOM;
+
+  const cancelAnimation = animateMapTo(
+    map,
+    selectedLocation.position,
+    destinationZoom,
+    PAN_DURATION,
+  );
+
+  return () => {
+    cancelAnimation();
+  };
+}, [selectedLocation, tourStarted]);
 
   if (mapError) {
     return (
