@@ -147,7 +147,7 @@ export const locations = [
     description:
       `"It's been a place that's legendary in Oakland. Anybody who is into reading, especially if you're in The Town, you've been there to get you some good reads and shit, man."`,
       //"Historic independent bookshop, opened in the '60s, specializing in titles by & about black people.",
-    videoSrc: "/videos/MarcusBooks.mp4",
+    videoSrc: "/videos/Marcus.mp4",
     videoCaption: "video of Marshawn talking about Marcus Books",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Marcus+Books",
