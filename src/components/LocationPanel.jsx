@@ -2,6 +2,17 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
   if (!location) {
     return (
       <section className="location-section">
+        <a
+            className="beast-logo"
+            href="https://www.amazon.com/Beast-Mode-510-Sheldon-Allen/dp/1953165885"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="beast-word">BEAST</span>
+            <span className="mode-word">MODE</span>
+            <span className="five-ten-word">510</span>
+          </a>
+
         <div className="location-placeholder">
           <h1 className="display-font">Marshawn Lynch's Guide to Oakland</h1>
 

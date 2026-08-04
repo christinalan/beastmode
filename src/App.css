@@ -51,6 +51,36 @@
   border-left: 1px solid #d7d7d7;
 }
 
+.beast-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;  
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.beast-logo:hover {
+  transform: scale(1.03);
+}
+
+.beast-word {
+  font-family: "Speedo Regular", sans-serif;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+}
+
+.mode-word {
+  font-family: "Speedo Regular", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.five-ten-word {
+  font-family: "Speedo Outline", sans-serif;
+  color: var(--color-accent);
+  font-size: 1.3rem;
+}
+
 .location-placeholder,
 .location-preview {
   width: 100%;
