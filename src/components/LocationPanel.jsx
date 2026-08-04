@@ -18,7 +18,7 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
 
             <p className="quote">
               "I feel like the importance of Oakland is not that it's just a place, but it's a character in its
-              own right. I believe it's going to have some real representation of The Town."
+              own right. Beast Mode 510 is going to have some real representation of The Town."
             </p>
             <p>—Marshawn Lynch</p>
 
