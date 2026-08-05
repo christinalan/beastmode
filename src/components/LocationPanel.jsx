@@ -1,36 +1,47 @@
 function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
   if (!location) {
     return (
-      <section className="location-section">
-        <a
-            className="beast-logo"
-            href="https://www.amazon.com/Beast-Mode-510-Sheldon-Allen/dp/1953165885"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="beast-word">BEAST</span>
-            <span className="mode-word">MODE</span>
-            <span className="five-ten-word">510</span>
-          </a>
-
-        <div className="location-placeholder">
-          <h1 className="display-font">Marshawn Lynch's Guide to Oakland</h1>
-
-            <p className="quote">
-              "I feel like the importance of Oakland is not that it's just a place, but it's a character in its
-              own right. Beast Mode 510 is going to have some real representation of The Town."
-            </p>
-            <p>—Marshawn Lynch</p>
-
-             <button
-              className="explore-button"
-              onClick={onExplore}
+      <section className="landing-section">
+        <section className="location-section">
+          <a
+              className="beast-logo"
+              href="https://www.amazon.com/Beast-Mode-510-Sheldon-Allen/dp/1953165885"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <span className="display-font">Explore Oakland</span>
-                <span>→</span>
-            </button>
-            
-        </div>
+              <span className="beast-word">BEAST</span>
+              <span className="mode-word">MODE</span>
+              <span className="five-ten-word">510</span>
+            </a>
+
+          <div className="location-placeholder">
+            <h1 className="display-font">Marshawn Lynch's Guide to Oakland</h1>
+
+              <p className="quote">
+                "I feel like the importance of Oakland is not that it's just a place, but it's a character in its
+                own right. Beast Mode 510 is going to have some real representation of The Town."
+              </p>
+              <p>—Marshawn Lynch</p>
+
+              <button
+                className="explore-button"
+                onClick={onExplore}
+              >
+                  <span className="display-font">Explore Oakland</span>
+                  <span className="material-symbols-outlined">
+                    chevron_right
+                  </span>
+              </button>
+
+          </div>
+
+              <img
+                className="landing-image"
+                src="/images/Marshawn.jpg"
+                alt="Beast Mode 510 comic artwork"
+              />
+              
+        </section>
       </section>
     );
   }
