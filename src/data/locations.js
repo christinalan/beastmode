@@ -31,7 +31,7 @@ export const locations = [
       lng: -122.2647,
     },
     description:
-      `"I picked these parks because they represent every site of Oakland and I'm going to each one of them to give you a different side of Oakland, but they all hold significant meanings in their area."`,
+      `"I picked these parks because they represent every side of Oakland and I'm going to each one of them to give you a different side of Oakland, but they all hold significant meanings in their area."`,
       // "A few of Oakland's most beloved neighborhood parks with basketball courts, baseball fields, and vibrant community atmospheres.",
     videoSrc: "/videos/OaklandParks.mp4",
     videoCaption: "video of Marshawn talking about Oakland Parks",
@@ -50,7 +50,7 @@ export const locations = [
       lng: -122.2698,
     },
     description:
-      `"Dope Era is owned by Oakland's very own Mr. Fab...This is an individual who's been a multi-platinum recording artist, a ghost writer for probably some of your favorite artists. He also do a lot in the community and give back...This is an individual who inspires, who motivates individuals and the community."`,
+      `"Dope Era is owned by Oakland's very own Mr. F.A.B. ...This is an individual who's been a multi-platinum recording artist, a ghost writer for probably some of your favorite artists. He also do a lot in the community and give back...This is an individual who inspires, who motivates individuals and the community."`,
       //"Mistah F.A.B.'s Oakland clothing brand celebrating Bay Area culture through fashion.",
     videoSrc: "/videos/DopeEraClothing.mp4",
     videoCaption: "video of Marshawn talking about Dope Era",
@@ -88,7 +88,7 @@ export const locations = [
       lng: -122.2695,
     },
     description:
-      `"Now these places I pick, man, these are the cool spots back in the day. They got a lot of history...Your OGs, go ask them about Mingles and Jeffries. They're going to be able to tell you some real, real stories."`,
+      `"Now these places I pick, man, these are the cool spots back in the day. They got a lot of history...Your OGs, go ask them about Mingles and Geoffrey's. They're going to be able to tell you some real, real stories."`,
       //"An iconic Oakland jazz club and cultural venue that has hosted musicians, artists, activists, and community events for decades.",
     videoSrc: "/videos/JeffriesMingles.mp4",
     videoCaption: "video of Marshawn talking about Jeffries (Geoffrey's Inner Circle) and Mingles",
@@ -107,7 +107,7 @@ export const locations = [
       lng: -122.2814,
     },
     description:
-      `"What make this spot so dope is that before it was ran by a lady named Cassie who fed the community for years...When I got word that she was selling, this was a great opportunity for me to get into this space and be able to keep it alive."`,  
+      `"What make this spot so dope is that before it was ran by a lady named Cassie who fed the community for years... When I got word that she was selling, this was a great opportunity for me to get into this space and be able to keep it alive."`,  
     //"A longtime East Bay soul food institution just over the Oakland border, known for Southern comfort food and community gatherings.",
     videoSrc: "/videos/RobBens.mp4",
     videoCaption: "video of Marshawn talking about Rob Ben's",
