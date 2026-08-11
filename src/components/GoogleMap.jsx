@@ -5,11 +5,11 @@ import {
 } from "@googlemaps/js-api-loader";
 
 const OAKLAND_CENTER = {
-  lat: 37.8044,
+  lat: 37.8200,
   lng: -122.2712,
 };
 
-const INITIAL_ZOOM = 12;
+const INITIAL_ZOOM = 13.5;
 const TOUR_ZOOM = 18;
 const PAN_DURATION = 1200;
 
@@ -149,8 +149,8 @@ function GoogleMap({
           center: OAKLAND_CENTER,
           zoom: INITIAL_ZOOM,
           mapId,
-          mapTypeControl: false,
-          streetViewControl: false,
+          mapTypeControl: true,
+          streetViewControl: true,
           fullscreenControl: true,
           clickableIcons: true,
         });
