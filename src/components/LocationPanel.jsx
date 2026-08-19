@@ -1,3 +1,5 @@
+import { trackEvent } from "../utils/analytics";
+
 function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
   if (!location) {
     return (
@@ -8,6 +10,11 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
               href="https://www.amazon.com/Beast-Mode-510-Sheldon-Allen/dp/1953165885"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent("book_link_click", {
+                  link_location: "header_logo",
+                });
+              }}
             >
               <span className="beast-word">BEAST</span>
               <span className="mode-word">MODE</span>
@@ -73,7 +80,15 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
           <button
             type="button"
             className="stop-navigation-button"
-            onClick={() => onSelectLocation(previousLocation)}
+            onClick={() => {
+              trackEvent("tour_navigation", {
+                direction: "previous",
+                from_stop: location.stop,
+                to_stop: previousLocation.stop,
+              });
+
+              onSelectLocation(previousLocation);
+            }}
             aria-label={`Go back to Stop ${previousLocation.stop}`}
           >
             <span className="material-symbols-outlined">
@@ -86,7 +101,15 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
           <button
             type="button"
             className="stop-navigation-button"
-            onClick={() => onSelectLocation(nextLocation)}
+            onClick={() => {
+                trackEvent("tour_navigation", {
+                  direction: "next",
+                  from_stop: location.stop,
+                  to_stop: nextLocation.stop,
+                });
+
+                onSelectLocation(nextLocation);
+              }}
             aria-label={`Go to Stop ${nextLocation.stop}`}
           >
             <span className="material-symbols-outlined">
@@ -129,6 +152,12 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
               playsInline
               preload="metadata"
               poster={location.videoPoster || undefined}
+              onPlay={() => {
+                trackEvent("video_play", {
+                  stop_number: location.stop,
+                  location_name: location.name,
+                });
+              }}
             >
               <source src={location.videoSrc} type="video/mp4" />
 
@@ -150,6 +179,12 @@ function LocationPanel({ location, locations, onExplore, onSelectLocation }) {
             href={location.mapsUrl}
             target="_blank"
             rel="noreferrer"
+            onClick={() => {
+              trackEvent("open_google_maps", {
+                stop_number: location.stop,
+                location_name: location.name,
+              });
+            }}
           >
             Save in Google Maps
           </a>

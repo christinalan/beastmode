@@ -2,6 +2,7 @@ import { useState } from "react";
 import GoogleMap from "./components/GoogleMap";
 import LocationPanel from "./components/LocationPanel";
 import { locations } from "./data/locations";
+import { trackEvent } from "./utils/analytics";
 import "./App.css";
 
 function App() {
@@ -9,11 +10,19 @@ function App() {
   const [tourStarted, setTourStarted] = useState(false);
 
    function handleExplore() {
+    trackEvent("explore_oakland");
+
     setTourStarted(true);
     setSelectedLocation(locations[0]);
   }
 
    function handleSelectTourLocation(location) {
+    trackEvent("stop_view", {
+    stop_number: location.stop,
+    location_id: location.id,
+    location_name: location.name,
+  });
+
     setTourStarted(true);
     setSelectedLocation(location);
   }

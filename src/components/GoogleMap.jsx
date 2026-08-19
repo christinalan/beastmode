@@ -3,6 +3,7 @@ import {
   importLibrary,
   setOptions,
 } from "@googlemaps/js-api-loader";
+import { trackEvent } from "../utils/analytics";
 
 const OAKLAND_CENTER = {
   lat: 37.8200,
@@ -180,6 +181,10 @@ function GoogleMap({
           });
 
             marker.addListener("click", () => {
+            trackEvent("map_marker_click", {
+              stop_number: location.stop,
+              location_name: location.name,
+            });
             onSelectLocationRef.current(location);
           });
 
